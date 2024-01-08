@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e 
 
+apt-get update
+apt-get upgrade -y
+
+apt-get install software-properties-common
+
 # Get key
 add-apt-repository -y ppa:git-core/ppa 
 
@@ -22,5 +27,3 @@ apt-get install -y --allow-unauthenticated \
 
 apt-get update
 apt-get upgrade -y
-
-pip3 install virtualenv

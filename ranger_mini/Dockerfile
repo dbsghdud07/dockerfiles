@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
+FROM dustynv/l4t-pytorch:r36.2.0
 
 #nvidia-container-runtime 
 # ENV NVIDIA_VISIBLE_DEVICES \

@@ -1,3 +1,5 @@
+docker build -t kimm:v1.0 .
+
 docker run -it \
     --privileged \
     -e DISPLAY=$DISPLAY \
@@ -8,5 +10,5 @@ docker run -it \
     --hostname hy-B660M-HD3P \
     --network host \
     --gpus all \
-    --name kimm_orchard \
+    --name kimm_orchard1 \
     kimm:v1.0 bash

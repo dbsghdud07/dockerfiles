@@ -1,4 +1,4 @@
-docker build -t cuda10.1_cudnn7_ubuntu16.04_py3.7:v1.0 .
+docker build -t cuda10.1_cudnn7_ubuntu18.04:v1.0 .
 
 docker run -it \
     --privileged \
@@ -9,5 +9,5 @@ docker run -it \
     --hostname hy-B660M-HD3P \
     --network host \
     --gpus all \
-    --name cuda10.1 \
-    cuda10.1_cudnn7_ubuntu16.04_py3.7:v1.0 bash
+    --name cuda10.1_cudnn7_ubuntu18.04 \
+    cuda10.1_cudnn7_ubuntu18.04:v1.0 bash

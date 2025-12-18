@@ -1,4 +1,4 @@
-docker build -t issac_sim:v1.0 .
+docker build -t isaac_sim:v5.0.0 .
 
 docker run -it \
     --privileged \
@@ -16,19 +16,10 @@ docker run -it \
     -v ~/docker/isaac-sim/documents:/root/Documents:rw \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -v /home/$USER/docker_mounted/:/root/mounted_folder/ \
-    --hostname hy \
-    --network host \
-    --gpus all \
-    --name issac_sim \
-    --ipc host \
-    issac_sim:v1.0
-
-
-docker run -it \
-    --privileged \
     -v /mnt/ssd1/:/root/ssd1/ \
     --hostname hy \
     --network host \
     --gpus all \
-    --ipc=host \
-    --name sampling_hy
+    --name isaac_sim_dev \
+    --ipc host \
+    isaac_sim:v5.0.0 /bin/bash
